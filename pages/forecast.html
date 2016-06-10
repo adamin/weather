@@ -1,0 +1,15 @@
+<p>
+    <a href="#/">Back to Search</a>
+</p>
+<h2>Today in {{city.name}}:</h2>
+<weather-current weather-day="weatherResult.list[0]" convert-to-standard="convertToCelsius(temp)" convert-to-date="convertToDate(dt)" units="C" date-format="d MMMM y H:mm"></weather-current>
+
+<h2>Forecast for {{city.name}}:</h2>
+<hr />
+<div ng-repeat="w in forecast">
+    <div class="row">
+        <div class="col-md-12">
+            <weather-forecast-item weather-day="w[0]" convert-to-standard="convertToCelsius(temp)" units="C" convert-to-date="convertToDate(dt)" date-format="d MMMM y H:mm"></weather-forecast-item>
+        </div>
+    </div>
+</div>

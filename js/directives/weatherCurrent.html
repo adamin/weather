@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">Temperature</div>
+            <div class="col-md-9">{{ convertToStandard({ temp: weatherDay.main.temp }) }}&deg;{{units}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Humidity</div>
+            <div class="col-md-9">{{weatherDay.main.humidity}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Pressure</div>
+            <div class="col-md-9">{{weatherDay.main.pressure}}</div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="text-right"><em>Last updated: {{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</em></div>
+    </div>
+</div>

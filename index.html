@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+    <head>
+        <title>AngularJS Weather App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+        <!-- scripts below would normally be packed and minified and not included one by one like that -->
+        <script src="js/app.js"></script>
+        <script src="js/services/cityService.js"></script>
+        <script src="js/controllers/homeController.js"></script>
+        <script src="js/controllers/forecastController.js"></script>
+        <script src="js/directives/weatherCurrent.js"></script>
+        <script src="js/directives/weatherForecastItem.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">AngularJS Weather</a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
